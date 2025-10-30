@@ -50,7 +50,6 @@ layout:
     style: row
     columns: 2
     header: true
-    header: false
     useEqualHeights: true
   Media:
     style: column
