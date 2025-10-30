@@ -10,3 +10,28 @@
 #- search:
 #    provider: duckduckgo
 #    target: _blank
+
+- greeting:
+    text_size: 2xl
+    text: Your Homelab
+
+- datetime:
+    text_size: md
+    format:
+        timeStyle: short
+        dateStyle: short
+        hour12: false
+
+- resources:
+    expanded: false
+    cpu: true 
+    cputemp: true
+    memory: true  
+    uptime: true
+    refresh: 1000
+
+- search:
+    provider: google 
+    focus: true
+    showSearchSuggestions: true
+    target: _parent
