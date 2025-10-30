@@ -14,7 +14,7 @@ language: en
 target: _self
 headerStyle: boxed
 hideVersion: true
-disableCollapse: true
+disableCollapse: false
 useEqualHeights: false
 showStats: false
 statusStyle: "."
@@ -27,7 +27,7 @@ quicklaunch:
   provider: google
 
 # Site Assets
-base: http://localhost:3000
+#base: http://localhost:3000
 #favicon: /icons/favicon-small.png
 background:
     image: /opt/homepage/config/images/pexels-pixabay-33109.jpg
@@ -43,12 +43,13 @@ layout:
   Homelab:
     style: row
     columns: 2
-    header: false
+    header: true
     useEqualHeights: true
     showStats: true
   Productivity:
     style: row
     columns: 2
+    header: true
     header: false
     useEqualHeights: true
   Media:
