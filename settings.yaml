@@ -5,3 +5,59 @@
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
+
+
+# Basic Site Settings
+title: msaul/homepage
+language: en
+color: grey
+target: _self
+headerStyle: boxed
+hideVersion: true
+disableCollapse: true
+useEqualHeights: false
+showStats: true
+statusStyle: "basic"
+
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: false
+  showSearchSuggestions: true
+  hideVisitURL: false
+  provider: google
+
+# Site Assets
+base: http://localhost:3000
+#favicon: /icons/favicon-small.png
+background:
+    image: images/pexels-pixabay-33109.jpg
+    #blur: md
+    #opacity: 65
+    #brightness: 50
+
+
+
+
+# Layout Configuration
+layout:
+  Homelab:
+    style: row
+    header: false
+    useEqualHeights: true
+  Productivity:
+    style: row
+    header: false
+    useEqualHeights: true
+  Media:
+    style: column
+    header: false
+  AI & Development:
+    style: column
+    header: false
+  Infrastructure:
+    style: column
+    header: false
+  
+
+
+#    iconsOnly: true

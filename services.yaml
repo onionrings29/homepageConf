@@ -2,17 +2,88 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- My First Group:
-    - My First Service:
-        href: http://localhost/
-        description: Homepage is awesome
+- Homelab:
+    - homelab01:
+        href: http://10.129.20.10:8006
+        ping: 10.129.20.10
+    - homelab02:
+        href: http://10.129.20.12:8006
+        ping: 10.129.20.12
 
-- My Second Group:
-    - My Second Service:
-        href: http://localhost/
-        description: Homepage is the best
+# Productivity & Planning
+- Productivity:
+    - Leantime:
+        #icon: leantime.png
+        href: http://10.129.20.27/
+        description: Project Management
+        ping: 10.129.20.27
+        #widget:
+        #  type: iframe
+        #  src: http://10.129.20.27/
 
-- My Third Group:
-    - My Third Service:
-        href: http://localhost/
-        description: Homepage is 😎
+    - Mealie:
+        #icon: mealie.png
+        href: http://10.129.20.29:9000/
+        description: Recipe Manager
+        ping: 10.129.20.29
+
+# Media & Entertainment
+- Media:
+    - Jellyfin:
+        #icon: jellyfin.png
+        href: http://10.129.20.18:8096/
+        description: Media Server
+        ping: 10.129.20.18
+        #widget:
+        #  type: jellyfin
+        #  url: http://10.129.20.18:8096
+        #  key: YOUR_JELLYFIN_API_KEY
+        #  enableBlocks: true
+        #  enableNowPlaying: true
+
+    - Immich:
+        #icon: immich.png
+        href: http://10.129.20.22:2283/
+        description: Photo Management
+        ping: 10.129.20.22
+        #widget:
+        #  type: immich
+        #  url: http://10.129.20.22:2283
+        #  key: YOUR_IMMICH_API_KEY
+
+    - Agent DVR:
+        #icon: mdi-cctv
+        href: http://10.129.20.25:8090/
+        description: Security Camera System
+        ping: 10.129.20.25
+
+# AI & Tools
+- AI & Development:
+    - Anything LLM:
+        #icon: si-openai
+        href: http://10.129.20.11:3001/
+        description: Local AI Assistant
+        ping: 10.129.20.11
+
+# Network & Infrastructure
+- Infrastructure:
+    - Pi-hole:
+        #icon: pihole.png
+        href: http://10.129.20.20/admin/
+        description: Network-wide Ad Blocking
+        ping: 10.129.20.20
+        #widget:
+        #  type: pihole
+        #  url: http://10.129.20.20
+        #  key: YOUR_PIHOLE_API_KEY
+
+    - Nginx Proxy Manager:
+        #icon: nginx-proxy-manager.png
+        href: https://10.129.50.200:81/
+        description: Reverse Proxy
+        siteMonitor: https://10.129.50.200:81
+        #widget:
+        #  type: npm
+        #  url: https://10.129.50.200:81
+        #  username: YOUR_NPM_USERNAME
+        #  password: YOUR_NPM_PASSWORD
