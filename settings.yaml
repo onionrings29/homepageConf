@@ -10,7 +10,7 @@ providers:
 # Basic Site Settings
 title: msaul/homepage
 language: en
-color: grey
+#color: grey
 target: _self
 headerStyle: boxed
 hideVersion: true
@@ -30,7 +30,7 @@ quicklaunch:
 base: http://localhost:3000
 #favicon: /icons/favicon-small.png
 background:
-    image: images/pexels-pixabay-33109.jpg
+    image: /opt/homepage/config/images/pexels-pixabay-33109.jpg
     #blur: md
     #opacity: 65
     #brightness: 50
@@ -43,11 +43,13 @@ layout:
   Homelab:
     style: row
     header: false
+    columns: 2
     useEqualHeights: true
   Productivity:
     style: row
     header: false
     useEqualHeights: true
+    columns: 2
   Media:
     style: column
     header: false
