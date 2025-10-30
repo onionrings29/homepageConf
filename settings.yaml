@@ -31,8 +31,8 @@ quicklaunch:
 #favicon: /icons/favicon-small.png
 background:
     image: /images/pexels-pixabay-33109.jpg
-    #blur: md
-    #opacity: 65
+    blur: md
+    opacity: 65
     #brightness: 50
 
 
