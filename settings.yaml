@@ -32,7 +32,7 @@ quicklaunch:
 background:
     image: /images/pexels-pixabay-33109.jpg
     blur: md
-    opacity: 65
+    opacity: 100
     #brightness: 50
 
 
