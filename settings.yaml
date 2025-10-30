@@ -17,7 +17,7 @@ hideVersion: true
 disableCollapse: true
 useEqualHeights: false
 showStats: false
-statusStyle: "basic"
+statusStyle: "."
 
 quicklaunch:
   searchDescriptions: true
@@ -42,15 +42,15 @@ background:
 layout:
   Homelab:
     style: row
-    header: false
     columns: 2
+    header: false
     useEqualHeights: true
     showStats: true
   Productivity:
     style: row
+    columns: 2
     header: false
     useEqualHeights: true
-    columns: 2
   Media:
     style: column
     header: false
