@@ -30,7 +30,6 @@ quicklaunch:
 #base: http://localhost:3000
 #favicon: /icons/favicon-small.png
 background: /images/background.png
-cardBlur: md
 
 
 
@@ -43,20 +42,25 @@ layout:
     header: false
     useEqualHeights: true
     showStats: true
+    cardBlur: md
   Productivity:
     style: row
     columns: 2
     header: false
     useEqualHeights: true
+    cardBlur: md
   Media:
     style: column
     header: false
+    cardBlur: md
   AI & Development:
     style: column
     header: false
+    cardBlur: md
   Infrastructure:
     style: column
     header: false
+    cardBlur: md
   
 
 

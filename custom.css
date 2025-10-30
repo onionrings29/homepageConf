@@ -79,27 +79,6 @@ button[id$='-tab'][aria-selected="true"] {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-/* Header */
-.information-widget-logo img {
-  width: 64px !important;
-  height: 64px !important;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 15px rgba(255, 255, 255, 0.1);
-  transition: var(--transition);
-}
-
-.information-widget-logo img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2), 0 0 25px rgba(255, 255, 255, 0.15);
-}
-
-.information-widget-logo + .information-widget-greeting span {
-  font-weight: 700 !important;
-  color: var(--text-primary) !important;
-  font-size: 28px !important;
-  letter-spacing: -0.8px;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-}
 
 /* Service Cards */
 .service-card {
@@ -159,6 +138,57 @@ button[id$='-tab'][aria-selected="true"] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Widgets */
+.widget {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.widget:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.widget-stats {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) !important;
+  gap: 8px !important;
+  margin-top: 8px !important;
+}
+
+.widget-stat {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: var(--radius-sm) !important;
+  text-align: center !important;
+  padding: 8px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.widget-stat:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.02);
+}
+
+.widget-stat-value {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.widget-stat-label {
+  font-size: 11px !important;
+  color: var(--text-secondary) !important;
+  margin-top: 4px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
 
 /* Status Dots */
 .status-dot {
