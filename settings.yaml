@@ -30,7 +30,7 @@ quicklaunch:
 #base: http://localhost:3000
 #favicon: /icons/favicon-small.png
 background:
-    image: /opt/homepage/config/images/pexels-pixabay-33109.jpg
+    image: /images/pexels-pixabay-33109.jpg
     #blur: md
     #opacity: 65
     #brightness: 50
