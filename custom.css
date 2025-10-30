@@ -1,5 +1,6 @@
 /**
  * iOS 26 Liquid Glass Theme for Homepage
+ * Enhanced Frosted Glass Effect with Darkening Base
  * @author Kernyx64
  */
 
@@ -8,13 +9,13 @@
 :root {
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'SF Mono', Consolas, Monaco, monospace;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-hover: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.11);
-  --glass-border-hover: rgba(255, 255, 255, 0.15);
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-hover: rgba(0, 0, 0, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-hover: rgba(255, 255, 255, 0.25);
   --text-primary: rgba(255, 255, 255, 1);
   --text-secondary: rgba(255, 255, 255, 0.85);
-  --blur: 20px;
+  --blur: 60px;
   --radius: 20px;
   --radius-sm: 16px;
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -22,11 +23,27 @@
 
 /* Global Styles */
 body { overflow-x: hidden; min-height: 100vh; position: relative; }
-body::before { content: ''; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.35); z-index: -2; }
-* { font-family: var(--font-primary) !important; font-weight: 500; -webkit-font-smoothing: antialiased; }
-.widget-stat-value, .text-xs, .ping-status { font-family: var(--font-mono) !important; font-weight: 600; }
 
-/* Glass Base Mixin */
+/* Darkening overlay for base */
+body::before { 
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content is above the overlay */
+#inner_wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass Base Mixin - Enhanced Frosted Effect */
 .service-card,
 button[id$='-tab'],
 .widget,
@@ -34,8 +51,8 @@ button[id$='-tab'],
 .bg-theme-200\/50,
 .flex-1.service-block,
 .flex.flex-col.mt-3.bookmark-list {
-  backdrop-filter: blur(var(--blur)) saturate(150%);
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(150%);
+  backdrop-filter: blur(var(--blur)) saturate(180%) brightness(0.85);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%) brightness(0.85);
   transition: var(--transition);
   border-radius: var(--radius);
   position: relative;
@@ -50,7 +67,7 @@ button[id$='-tab'] {
   color: var(--text-primary);
   font-size: 15px;
   letter-spacing: -0.2px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 button[id$='-tab']::before {
@@ -60,23 +77,23 @@ button[id$='-tab']::before {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
 button[id$='-tab']:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 button[id$='-tab']:hover::before { left: 100%; }
 
 button[id$='-tab'][aria-selected="true"] {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 0 20px rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 /* Header */
@@ -84,13 +101,13 @@ button[id$='-tab'][aria-selected="true"] {
   width: 64px !important;
   height: 64px !important;
   border-radius: var(--radius-sm);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
   transition: var(--transition);
 }
 
 .information-widget-logo img:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2), 0 0 25px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 255, 255, 0.15);
 }
 
 .information-widget-logo + .information-widget-greeting span {
@@ -98,14 +115,14 @@ button[id$='-tab'][aria-selected="true"] {
   color: var(--text-primary) !important;
   font-size: 28px !important;
   letter-spacing: -0.8px;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Service Cards */
+/* Service Cards - Enhanced Frosted Glass */
 .service-card {
   background: var(--glass-bg) !important;
   border: 1px solid var(--glass-border) !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
 }
 
 .service-card::before {
@@ -115,7 +132,7 @@ button[id$='-tab'][aria-selected="true"] {
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 100%);
   border-radius: var(--radius) var(--radius) 0 0;
   pointer-events: none;
   z-index: 1;
@@ -137,7 +154,9 @@ button[id$='-tab'][aria-selected="true"] {
 .service-card:hover {
   background: var(--glass-hover) !important;
   border-color: var(--glass-border-hover) !important;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(calc(var(--blur) * 1.2)) saturate(200%) brightness(0.8);
+  -webkit-backdrop-filter: blur(calc(var(--blur) * 1.2)) saturate(200%) brightness(0.8);
 }
 
 .service-card:hover::after { left: 100%; }
@@ -146,31 +165,33 @@ button[id$='-tab'][aria-selected="true"] {
 /* Internal Blocks */
 .bg-theme-200\/50,
 .flex-1.service-block {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .service-card:hover [class*="bg-theme-200/50"],
 .service-card:hover .flex-1.service-block {
-  background: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(0, 0, 0, 0.35) !important;
   border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Widgets */
+/* Widgets - Enhanced Frosted Glass */
 .widget {
-  background: rgba(255, 255, 255, 0.15) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .widget:hover {
-  background: rgba(255, 255, 255, 0.22) !important;
-  border-color: rgba(255, 255, 255, 0.35) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
   transform: translateY(-1px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(calc(var(--blur) * 1.2)) saturate(200%) brightness(0.8);
+  -webkit-backdrop-filter: blur(calc(var(--blur) * 1.2)) saturate(200%) brightness(0.8);
 }
 
 .widget-stats {
@@ -181,16 +202,16 @@ button[id$='-tab'][aria-selected="true"] {
 }
 
 .widget-stat {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
   border-radius: var(--radius-sm) !important;
   text-align: center !important;
   padding: 8px !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .widget-stat:hover {
-  background: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(0, 0, 0, 0.35) !important;
   border-color: rgba(255, 255, 255, 0.2) !important;
   transform: scale(1.02);
 }
@@ -199,7 +220,7 @@ button[id$='-tab'][aria-selected="true"] {
   font-size: 15px !important;
   font-weight: 700 !important;
   color: var(--text-primary) !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .widget-stat-label {
@@ -248,7 +269,7 @@ button[id$='-tab'][aria-selected="true"] {
   color: var(--text-primary) !important;
   font-size: 16px !important;
   letter-spacing: -0.3px;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .service-description {
@@ -256,7 +277,7 @@ button[id$='-tab'][aria-selected="true"] {
   font-size: 13px !important;
   font-weight: 500;
   letter-spacing: -0.1px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .text-sm {
@@ -266,20 +287,20 @@ button[id$='-tab'][aria-selected="true"] {
   color: var(--text-secondary);
   font-weight: 500;
   letter-spacing: -0.1px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* Bookmarks */
+/* Bookmarks - Enhanced Frosted Glass */
 .flex.flex-col.mt-3.bookmark-list {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 16px 12px;
   margin-bottom: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .bookmark-icon {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -317,15 +338,15 @@ button[id$='-tab'][aria-selected="true"] {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 4px; }
-::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 4px; backdrop-filter: blur(8px); }
-::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.25); }
+::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; backdrop-filter: blur(8px); }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
 
 /* Overrides */
 .p-1 { padding: 0.5rem !important; }
 .bg-theme-100\/20 { background-color: transparent !important; }
 
-/* Fix conteneur externe des service cards - Version qui marchait */
+/* Fix conteneur externe des service cards */
 .services > div {
   background: transparent !important;
   border: none !important;
@@ -334,16 +355,16 @@ button[id$='-tab'][aria-selected="true"] {
   padding: 0 !important;
 }
 
-/* Service cards - Rétablir le style glass correct */
+/* Service cards - Enhanced Frosted Glass Effect */
 .service-card {
   background: var(--glass-bg) !important;
   border: 1px solid var(--glass-border) !important;
   border-radius: var(--radius) !important;
-  backdrop-filter: blur(var(--blur)) saturate(173%) !important;
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(150%) !important;
+  backdrop-filter: blur(var(--blur)) saturate(180%) brightness(0.85) !important;
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%) brightness(0.85) !important;
   box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
 }
 
 /* Animations */
@@ -363,7 +384,7 @@ button[id$='-tab'][aria-selected="true"] {
 /* Responsive */
 @media (max-width: 1024px) {
   :is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="HOME-tab"])) #layout-groups { grid-template-columns: repeat(2, 1fr) !important; }
-  :root { --blur: 16px; }
+  :root { --blur: 40px; }
 }
 
 @media (max-width: 768px) {
@@ -372,7 +393,7 @@ button[id$='-tab'][aria-selected="true"] {
   .service-title { font-size: 17px !important; }
   .service-description { font-size: 14px !important; }
   button[id$='-tab'] { padding: 8px 24px; font-size: 14px; }
-  :root { --blur: 12px; }
+  :root { --blur: 30px; }
 }
 
 /* Utilities */
