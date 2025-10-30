@@ -43,13 +43,13 @@ layout:
   Homelab:
     style: row
     columns: 2
-    header: true
+    header: false
     useEqualHeights: true
     showStats: true
   Productivity:
     style: row
     columns: 2
-    header: true
+    header: false
     useEqualHeights: true
   Media:
     style: column
