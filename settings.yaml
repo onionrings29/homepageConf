@@ -12,7 +12,7 @@ title: msaul/homepage
 language: en
 #color: grey
 target: _self
-#headerStyle: boxed
+headerStyle: boxed
 hideVersion: true
 disableCollapse: true
 useEqualHeights: false

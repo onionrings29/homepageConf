@@ -25,7 +25,6 @@
 - resources:
     expanded: false
     cpu: true 
-    cputemp: true
     memory: true  
     uptime: true
     refresh: 1000
