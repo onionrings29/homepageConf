@@ -12,11 +12,11 @@ title: msaul/homepage
 language: en
 #color: grey
 target: _self
-headerStyle: boxed
+#headerStyle: boxed
 hideVersion: true
 disableCollapse: true
 useEqualHeights: false
-showStats: true
+showStats: false
 statusStyle: "basic"
 
 quicklaunch:
@@ -45,6 +45,7 @@ layout:
     header: false
     columns: 2
     useEqualHeights: true
+    showStats: true
   Productivity:
     style: row
     header: false
