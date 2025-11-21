@@ -49,7 +49,23 @@ layout:
     header: false
     useEqualHeights: true
     cardBlur: md
-  Media:
+  ARR Suite:
+    style: column
+    header: false
+    cardBlur: md
+  Frontend Media Servers:
+    style: column
+    header: false
+    cardBlur: md
+  Media Tools:
+    style: column
+    header: false
+    cardBlur: md
+  Download Clients:
+    style: column
+    header: false
+    cardBlur: md
+  Other Services:
     style: column
     header: false
     cardBlur: md

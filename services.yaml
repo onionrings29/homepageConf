@@ -27,37 +27,8 @@
         description: Recipe Manager
         ping: 10.129.20.29
 
-# Media & Entertainment
-# Media & Entertainment
-- Media:
-    - Jellyfin:
-        #icon: jellyfin.png
-        href: http://10.129.20.16:8096/
-        description: Media Server
-        ping: 10.129.20.16
-
-    - Immich:
-        #icon: immich.png
-        href: http://10.129.20.22:2283/
-        description: Photo Management
-        ping: 10.129.20.22
-
-    - Agent DVR:
-        #icon: mdi-cctv
-        href: http://10.129.20.25:8090/
-        description: Security Camera System
-        ping: 10.129.20.25
-
-    - Jellyseerr:
-        href: http://10.129.20.33:5055/
-        description: Media Request Manager
-        ping: 10.129.20.33
-
-    - Deluge:
-        href: http://10.129.20.35:8112/
-        description: Torrent Client
-        ping: 10.129.20.35
-
+# ARR Suite - Media Library Management
+- ARR Suite:
     - Sonarr:
         href: http://10.129.20.37:8989/
         description: TV Show Manager
@@ -73,15 +44,57 @@
         description: Indexer Manager
         ping: 10.129.20.39
 
+# Frontend Media Servers - User-facing Streaming
+- Frontend Media Servers:
+    - Jellyfin:
+        #icon: jellyfin.png
+        href: http://10.129.20.16:8096/
+        description: Media Server
+        ping: 10.129.20.16
+
+# Media Tools - Supporting Tools for Media Ecosystem
+- Media Tools:
+    - Bazarr:
+        href: http://10.129.20.41:6767/
+        description: Subtitle Manager
+        ping: 10.129.20.41
+
+    - Jellyseerr:
+        href: http://10.129.20.33:5055/
+        description: Media Request Manager
+        ping: 10.129.20.33
+
     - Wizarr:
         href: http://10.129.20.40:5690/
         description: Invite Management for Jellyfin/Emby/Plex
         ping: 10.129.20.40
 
-    - Bazarr:
-        href: http://10.129.20.41:6767/
-        description: Subtitle Manager
-        ping: 10.129.20.41
+# Download Clients - Torrent/Download Management
+- Download Clients:
+    - Deluge:
+        href: http://10.129.20.35:8112/
+        description: Torrent Client
+        ping: 10.129.20.35
+
+# Other Services - Non-Media Services
+- Other Services:
+    - Immich:
+        #icon: immich.png
+        href: http://10.129.20.22:2283/
+        description: Photo Management
+        ping: 10.129.20.22
+
+    - Agent DVR:
+        #icon: mdi-cctv
+        href: http://10.129.20.25:8090/
+        description: Security Camera System
+        ping: 10.129.20.25
+
+    - BookLore:
+        #icon: book.png
+        href: http://10.129.20.47:6060/
+        description: Book Management
+        ping: 10.129.20.47
 
 # AI & Tools
 - AI & Development:
