@@ -28,34 +28,60 @@
         ping: 10.129.20.29
 
 # Media & Entertainment
+# Media & Entertainment
 - Media:
     - Jellyfin:
         #icon: jellyfin.png
-        href: http://10.129.20.18:8096/
+        href: http://10.129.20.16:8096/
         description: Media Server
-        ping: 10.129.20.18
-        #widget:
-        #  type: jellyfin
-        #  url: http://10.129.20.18:8096
-        #  key: YOUR_JELLYFIN_API_KEY
-        #  enableBlocks: true
-        #  enableNowPlaying: true
+        ping: 10.129.20.16
 
     - Immich:
         #icon: immich.png
         href: http://10.129.20.22:2283/
         description: Photo Management
         ping: 10.129.20.22
-        #widget:
-        #  type: immich
-        #  url: http://10.129.20.22:2283
-        #  key: YOUR_IMMICH_API_KEY
 
     - Agent DVR:
         #icon: mdi-cctv
         href: http://10.129.20.25:8090/
         description: Security Camera System
         ping: 10.129.20.25
+
+    - Jellyseerr:
+        href: http://10.129.20.33:5055/
+        description: Media Request Manager
+        ping: 10.129.20.33
+
+    - Deluge:
+        href: http://10.129.20.35:8112/
+        description: Torrent Client
+        ping: 10.129.20.35
+
+    - Sonarr:
+        href: http://10.129.20.37:8989/
+        description: TV Show Manager
+        ping: 10.129.20.37
+
+    - Radarr:
+        href: http://10.129.20.38:7878/
+        description: Movie Manager
+        ping: 10.129.20.38
+
+    - Prowlarr:
+        href: http://10.129.20.39:9696/
+        description: Indexer Manager
+        ping: 10.129.20.39
+
+    - Wizarr:
+        href: http://10.129.20.40:5690/
+        description: Invite Management for Jellyfin/Emby/Plex
+        ping: 10.129.20.40
+
+    - Bazarr:
+        href: http://10.129.20.41:6767/
+        description: Subtitle Manager
+        ping: 10.129.20.41
 
 # AI & Tools
 - AI & Development:

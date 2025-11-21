@@ -1,1 +1,281 @@
 [2025-10-30T02:01:30.618Z] info: custom.css was copied to the config folder
+[2025-10-30T21:04:05.188Z] error: <index> YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+    at generateError (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:1273:10)
+    at throwError (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:1277:9)
+    at storeMappingPair (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:1448:7)
+    at readBlockMapping (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2263:9)
+    at composeNode (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2531:12)
+    at readBlockMapping (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2254:11)
+    at composeNode (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2531:12)
+    at readBlockMapping (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2254:11)
+    at composeNode (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2531:12)
+    at readDocument (file:///opt/homepage/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2715:3)
+[2025-10-30T21:04:05.345Z] error: Failed to discover services, please check kubernetes.yaml for errors or remove example entries.
+[2025-10-30T21:04:05.345Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:04:05.346Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:04:05.347Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:04:05.350Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:04:05.350Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:04:59.334Z] error: Failed to discover services, please check kubernetes.yaml for errors or remove example entries.
+[2025-10-30T21:04:59.335Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:04:59.336Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:04:59.336Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:04:59.339Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:04:59.339Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:00.363Z] error: Failed to discover services, please check kubernetes.yaml for errors or remove example entries.
+[2025-10-30T21:05:00.363Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:00.364Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:00.365Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:00.366Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:00.367Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.048Z] error: Failed to discover services, please check kubernetes.yaml for errors or remove example entries.
+[2025-10-30T21:05:01.048Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.049Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:01.049Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.050Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:01.050Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.560Z] error: Failed to discover services, please check kubernetes.yaml for errors or remove example entries.
+[2025-10-30T21:05:01.560Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.561Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:01.561Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.562Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:01.562Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.931Z] error: Failed to discover services, please check kubernetes.yaml for errors or remove example entries.
+[2025-10-30T21:05:01.931Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.933Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:01.933Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:01.934Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:01.935Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:02.189Z] error: Failed to discover services, please check kubernetes.yaml for errors or remove example entries.
+[2025-10-30T21:05:02.189Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:02.190Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:02.190Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:02.191Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:02.191Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:02.427Z] error: Failed to discover services, please check kubernetes.yaml for errors or remove example entries.
+[2025-10-30T21:05:02.427Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:02.428Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:02.428Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-10-30T21:05:02.429Z] error: Failed to load settings.yaml, please check for errors
+[2025-10-30T21:05:02.430Z] error: YAMLException: duplicated mapping key (53:5)
+
+ 50 |     style: row
+ 51 |     columns: 2
+ 52 |     header: true
+ 53 |     header: false
+----------^
+ 54 |     useEqualHeights: true
+ 55 |   Media:
+[2025-11-19T00:30:32.547Z] error: <httpProxy> Error calling https://10.129.50.200:81/...
+[2025-11-19T00:30:32.554Z] error: <httpProxy> [
+  500,
+  [Error: read ECONNRESET] {
+    errno: -104,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+]
+[2025-11-19T00:30:32.557Z] error: <httpProxy> Error calling https://10.129.50.200:81/...
+[2025-11-19T00:30:32.559Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 10.129.50.200:81
+      at <unknown> (Error: connect ECONNREFUSED 10.129.50.200:81) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '10.129.50.200',
+    port: 81
+  }
+]
