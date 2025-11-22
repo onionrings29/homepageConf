@@ -96,6 +96,12 @@
         description: Book Management
         ping: 10.129.20.47
 
+    - Ephemera:
+        #icon: ephemera.png
+        href: http://10.129.20.50:8286/
+        description: Ephemera Service
+        ping: 10.129.20.50
+
 # AI & Tools
 - AI & Development:
     - Anything LLM:
